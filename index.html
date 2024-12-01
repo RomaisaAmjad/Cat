@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icon.jpeg" type="image/x-icon">
+    <title>Meow | Cat </title>
+</head>
+<style>
+    .main{
+        background: url(blue.png);
+        width: 98vw;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    h1{
+        margin-left: 41%;
+        font-family: cursive;
+        font-weight: 700;
+        margin-top: 0px;
+        color: beige;
+        
+    }
+    .btn{
+        padding: 12px;
+        margin-top: 86px;
+        border-radius: 5px;
+        background-color: rgb(180, 146, 96);
+        color: rgb(15, 16, 16);
+        font-weight: 800;
+    }
+    .btn1{
+        margin-right: 12px;
+    }
+    .btn2{
+        margin-left: 12px;
+    }
+    .buttons{
+        margin-left: 37%;
+    }
+    .btn:hover{
+        cursor: pointer;
+        box-shadow: 0 0 25px rgb(254, 248, 248);
+        padding: 15px;
+    }
+    .awful{
+        background-color: rgba(12, 12, 12, 0.804);
+        height: 300px;
+        width: 98vw ;
+    }
+   
+    .purple-mode{
+        background: url(Purple.png);
+        width: 98vw;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+   
+</style>
+<body>
+    <div class="main">
+    <h1>Meow Meow</h1>
+</div>
+<div class="awful">
+<div class="buttons">
+    <button class=" btn btn1">Meow Sound</button>
+    <button class=" btn btn2">Change Colour</button>
+</div>
+</div>
+
+<script>
+    const audio = new Audio('catSound.mp3')
+    let button = document.querySelector(".btn2")
+    let bg = document.querySelector(".main")
+    let button1 = document.querySelector(".btn1")
+    
+    button.addEventListener("click",()=>{   
+        bg.classList.toggle("purple-mode")
+    })
+
+    button1.addEventListener("click",()=>{   
+       audio.play();
+    })
+</script>
+</body>
+</html>
